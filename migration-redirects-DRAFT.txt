@@ -1,0 +1,7 @@
+# DRAFT — validate all old URLs and current ownership before production.
+# Below are paths observed on the public original website. Cloudflare _redirects can include these after final review.
+/category/popravak-plastike/ /usluge/popravak-plastike-i-gume/ 301
+/category/motori/ /usluge/yamaha-vanbrodski-motori/ 301
+/category/naljepnice/ /usluge/naljepnice-za-plovila/ 301
+/category/nautika-540f/ /nautika-540f/ 301
+# More legacy URLs require a complete crawl before migration. DO NOT deploy these redirects on the demo.
