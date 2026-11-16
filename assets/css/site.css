@@ -29,3 +29,113 @@
 .feature-visual>picture{position:absolute;inset:0;width:100%;height:100%}
 .feature-visual>picture img{height:100%;width:100%;object-fit:cover}
 @media(max-width:680px){.hero>.hero-bg img{object-position:65% center}}
+
+/* Medium29 refinement: balanced, centrally aligned home hero for every language. */
+.hero{
+  text-align:center;
+}
+.hero-shade{
+  background:
+    linear-gradient(180deg,rgba(3,22,35,.39) 0%,rgba(3,25,41,.51) 43%,rgba(2,20,33,.64) 100%),
+    linear-gradient(90deg,rgba(1,19,34,.20),rgba(0,22,38,.16),rgba(1,19,34,.20));
+}
+.hero .container:not(.hero-bottom){
+  padding-top:clamp(82px,8vh,112px);
+  padding-bottom:42px;
+}
+.hero-copy{
+  width:min(100%,1090px);
+  max-width:none;
+  margin-inline:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.hero .eyebrow{
+  justify-content:center;
+  margin-bottom:23px;
+  text-align:center;
+}
+.hero .eyebrow::before{display:none}
+.hero h1{
+  width:100%;
+  max-width:1050px;
+  margin:0 auto 24px;
+  text-align:center;
+  font-size:clamp(3.35rem,6.6vw,6.65rem);
+  line-height:1.07;
+  letter-spacing:-.047em;
+  text-wrap:balance;
+}
+.hero h1 .accent{display:block}
+.hero .lead{
+  max-width:670px;
+  margin:0 auto 32px;
+  text-align:center;
+  line-height:1.68;
+  color:#e4eef1;
+}
+.hero .btn-stack{
+  width:100%;
+  justify-content:center;
+  gap:13px;
+}
+.hero .btn-stack .btn{min-width:205px}
+.hero-bottom{
+  justify-content:center;
+  text-align:center;
+}
+.hero-bottom .scroll-cue{display:none}
+@media(max-width:960px){
+  .hero-shade{
+    background:linear-gradient(180deg,rgba(3,22,35,.49) 0%,rgba(3,25,41,.59) 50%,rgba(2,20,33,.74) 100%);
+  }
+  .hero h1{font-size:clamp(3rem,7.65vw,5.55rem)}
+  .hero .container:not(.hero-bottom){padding-top:80px}
+}
+@media(max-width:680px){
+  .hero{min-height:670px}
+  .hero .container:not(.hero-bottom){padding-top:105px;padding-bottom:48px}
+  .hero .eyebrow{margin-bottom:17px;font-size:.59rem;letter-spacing:.15em}
+  .hero h1{
+    max-width:580px;
+    font-size:clamp(2.5rem,9.2vw,4.75rem);
+    line-height:1.105;
+    letter-spacing:-.045em;
+    margin-bottom:19px;
+  }
+  .hero .lead{max-width:470px;font-size:clamp(.91rem,3.6vw,1.04rem);line-height:1.61;margin-bottom:24px}
+  .hero .btn-stack{gap:10px}
+  .hero .btn-stack .btn{min-width:0;min-height:49px}
+  .hero-bottom{bottom:26px;justify-content:center}
+  .hero-bottom .location-note{max-width:none;letter-spacing:.15em}
+}
+@media(max-width:365px){
+  .hero h1{font-size:clamp(2.25rem,9.2vw,2.66rem)}
+  .hero .container:not(.hero-bottom){padding-top:95px;padding-bottom:45px}
+  .hero .btn-stack .btn{font-size:.63rem;padding:12px 13px;gap:8px}
+}
+/* Preserve intended full width: the shared .container selector was also affecting
+   the hero's absolutely positioned bottom strip and splitting the flex layout. */
+.hero>.container:not(.hero-bottom){
+  width:min(var(--max),calc(100% - 96px));
+  flex:0 1 auto;
+  margin-inline:auto;
+}
+.hero>.hero-bottom.container{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:42px;
+  width:min(var(--max),calc(100% - 96px));
+  padding-top:0;
+  z-index:2;
+  margin-inline:auto;
+}
+@media(max-width:960px){
+  .hero>.container:not(.hero-bottom),.hero>.hero-bottom.container{width:calc(100% - 52px)}
+}
+@media(max-width:680px){
+  .hero>.container:not(.hero-bottom),.hero>.hero-bottom.container{width:calc(100% - 40px)}
+  .hero>.hero-bottom.container{bottom:29px}
+}
