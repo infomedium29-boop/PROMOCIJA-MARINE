@@ -42,3 +42,10 @@ The 16 image panels are from 4 AI-created illustrative montages generated for th
 - Updated every service-detail page with more relevant, practical context and three useful enquiry prompts in HR, EN and DE.
 - Simplified the photo gallery and removed the misleading generic four-photo Nautika 540F gallery.
 - IMPORTANT: Original image assets are still **AI-generated illustrative imagery** from the initial prototype. They are not actual client references. Accurate replacement with real, approved company photographs is necessary before live publication.
+
+
+## Mobilni jezici i kontaktni gumbi (16. 11. 2026.)
+
+- HR/EN/DE padajući jezični izbornik vidljiv je u gornjoj navigaciji na mobitelu i tabletu, bez otvaranja hamburger izbornika. Jezični linkovi vode na odgovarajuću podstranicu.
+- Donja mobilna traka ima prirodnije nazive: „Nazovite nas” / „Pošaljite upit”, „Call us” / „Send an enquiry”, „Rufen Sie uns an” / „Anfrage senden”. Odredišta nisu mijenjana.
+- Ostale stranice, funkcije i dizajn preuzeti su iz prethodne provjerene demo verzije.

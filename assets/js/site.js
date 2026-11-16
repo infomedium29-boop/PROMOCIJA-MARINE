@@ -4,10 +4,10 @@ const header=document.querySelector('.site-header');
 const updateHeader=()=>header?.classList.toggle('is-scrolled',window.scrollY>26);
 window.addEventListener('scroll',updateHeader,{passive:true});updateHeader();
 const trigger=document.querySelector('.mobile-trigger');const panel=document.querySelector('.mobile-panel');
-function setMenu(open){body.classList.toggle('menu-open',open);trigger?.setAttribute('aria-expanded',String(open));const ml={hr:['Zatvori izbornik','Otvori izbornik'],en:['Close menu','Open menu'],de:['Menü schließen','Menü öffnen']}[root.lang]||['Close menu','Open menu'];trigger?.setAttribute('aria-label',open?ml[0]:ml[1]);panel?.setAttribute('aria-hidden',String(!open));}
+function setMenu(open){if(open){document.querySelector('.lang')?.classList.remove('open');document.querySelector('.lang-toggle')?.setAttribute('aria-expanded','false');}body.classList.toggle('menu-open',open);trigger?.setAttribute('aria-expanded',String(open));const ml={hr:['Zatvori izbornik','Otvori izbornik'],en:['Close menu','Open menu'],de:['Menü schließen','Menü öffnen']}[root.lang]||['Close menu','Open menu'];trigger?.setAttribute('aria-label',open?ml[0]:ml[1]);panel?.setAttribute('aria-hidden',String(!open));}
 trigger?.addEventListener('click',()=>setMenu(!body.classList.contains('menu-open')));
 panel?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-window.addEventListener('keydown',e=>{if(e.key==='Escape'){setMenu(false);closeLightbox();}});
+window.addEventListener('keydown',e=>{if(e.key==='Escape'){setMenu(false);closeLightbox();document.querySelector('.lang')?.classList.remove('open');document.querySelector('.lang-toggle')?.setAttribute('aria-expanded','false');}});
 const lang=document.querySelector('.lang'),langButton=document.querySelector('.lang-toggle');
 langButton?.addEventListener('click',()=>{const isOpen=lang.classList.toggle('open');langButton.setAttribute('aria-expanded',String(isOpen))});
 document.addEventListener('click',e=>{if(lang&&!lang.contains(e.target)){lang.classList.remove('open');langButton?.setAttribute('aria-expanded','false')}});

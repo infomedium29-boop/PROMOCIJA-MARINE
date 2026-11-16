@@ -169,3 +169,40 @@
 }
 /* German compound nouns must wrap cleanly on narrow screens. */
 html[lang="de"] h1,html[lang="de"] h2,html[lang="de"] h3{overflow-wrap:anywhere;hyphens:auto}
+
+
+/* Medium29: always-visible language dropdown in the mobile navigation. */
+@media(max-width:960px){
+  .nav-actions{gap:8px;flex:0 0 auto}
+  .nav-actions .lang{display:block;z-index:5}
+  .lang-toggle{min-width:52px;min-height:43px;padding:8px 9px;justify-content:center;gap:6px;border:1px solid rgba(255,255,255,.23);border-radius:4px;font-size:.8rem;letter-spacing:.02em}
+  .lang.open .lang-toggle,.lang-toggle:focus-visible{border-color:rgba(181,221,223,.85)}
+  .lang-dropdown{top:calc(100% + 10px);right:0;width:155px;padding:7px;box-shadow:0 16px 38px rgba(0,0,0,.23)}
+  .lang-dropdown a{min-height:43px;display:flex;align-items:center;padding:9px 12px;font-size:.85rem}
+  .mobile-panel .mobile-langs{display:none}
+  .mobile-trigger{flex:0 0 43px}
+}
+@media(max-width:680px){
+  .nav-shell{gap:10px}
+  .brand{width:clamp(150px,43vw,190px)}
+  .nav-actions{gap:7px}
+}
+@media(max-width:365px){
+  .nav-shell{gap:6px;padding-left:12px;padding-right:9px}
+  .brand{width:141px}
+  .nav-actions{gap:4px}
+  .lang-toggle{min-width:49px;padding:7px 7px}
+  .mobile-trigger{width:40px;flex-basis:40px}
+}
+/* Warmer, naturally worded mobile contact actions; unchanged destinations. */
+@media(max-width:680px){
+  .mobile-contact-bar a{
+    font-size:clamp(.72rem,2.8vw,.84rem);
+    font-weight:650;
+    letter-spacing:.01em;
+    text-transform:none;
+    line-height:1.25;
+    text-align:center;
+    padding-inline:5px;
+  }
+}
