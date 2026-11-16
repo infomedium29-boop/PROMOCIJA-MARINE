@@ -206,3 +206,18 @@ html[lang="de"] h1,html[lang="de"] h2,html[lang="de"] h3{overflow-wrap:anywhere;
     padding-inline:5px;
   }
 }
+
+/* Contact location: Google Maps embed with one-click navigation to business profile. */
+.location-map{position:relative;isolation:isolate;height:clamp(360px,45vw,490px);overflow:hidden;border:1px solid #ccdadf;background:#dae7e7;border-radius:10px;box-shadow:0 12px 34px rgba(11,37,52,.08)}
+.location-map-frame{display:block;border:0;width:100%;height:100%;pointer-events:none;filter:saturate(.86)}
+.location-map-link{position:absolute;inset:0;z-index:2;display:block;cursor:pointer;touch-action:manipulation}
+.location-map-link:focus-visible{outline:4px solid #2b90aa;outline-offset:-5px;border-radius:10px}
+.location-map-info{position:absolute;z-index:3;left:22px;bottom:22px;right:22px;display:flex;align-items:center;gap:13px;width:max-content;max-width:calc(100% - 44px);padding:15px 19px;background:#fff;border:1px solid #e4eceb;border-radius:7px;box-shadow:0 8px 30px rgba(2,22,30,.2);pointer-events:none;color:#0b2b3d;text-align:left}
+.location-pin-icon{width:35px;height:35px;display:grid;place-items:center;background:#e8f3f3;color:#11677b;border-radius:50%;flex:none}
+.location-pin-icon svg{width:20px;height:20px}
+.location-map-details{display:flex;flex-direction:column;min-width:0;gap:3px}
+.location-map-details strong{font-size:.95rem;font-weight:700}
+.location-map-details span{font-size:.79rem;color:#5e7480;line-height:1.4}
+.location-map-cta{white-space:nowrap;margin-left:15px;padding-left:19px;border-left:1px solid #dce5e8;color:#126b80;font-size:.79rem;font-weight:700}
+@media(max-width:630px){.location-map{height:355px;border-radius:6px}.location-map-info{left:12px;right:12px;bottom:12px;max-width:calc(100% - 24px);width:calc(100% - 24px);padding:12px;gap:9px}.location-pin-icon{width:32px;height:32px}.location-map-details strong{font-size:.85rem}.location-map-details span{font-size:.69rem}.location-map-cta{margin-left:auto;padding-left:10px;font-size:.69rem;white-space:normal;max-width:100px;text-align:right}}
+@media(max-width:360px){.location-map-info{flex-wrap:wrap}.location-map-details{flex:1}.location-map-cta{max-width:unset;margin:0 0 0 41px;border-left:0;padding-left:0;text-align:left}}

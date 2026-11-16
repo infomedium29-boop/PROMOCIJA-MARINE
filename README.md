@@ -49,3 +49,7 @@ The 16 image panels are from 4 AI-created illustrative montages generated for th
 - HR/EN/DE padajući jezični izbornik vidljiv je u gornjoj navigaciji na mobitelu i tabletu, bez otvaranja hamburger izbornika. Jezični linkovi vode na odgovarajuću podstranicu.
 - Donja mobilna traka ima prirodnije nazive: „Nazovite nas” / „Pošaljite upit”, „Call us” / „Send an enquiry”, „Rufen Sie uns an” / „Anfrage senden”. Odredišta nisu mijenjana.
 - Ostale stranice, funkcije i dizajn preuzeti su iz prethodne provjerene demo verzije.
+
+## Dopuna: karta i kontakt (16.11.2026.)
+
+Na sve tri kontaktne stranice dodana je ugrađena Google karta za Promocija Marine (Selišće 36, Rakitje). Klik na bilo koji dio karte otvara potvrđeni Google Maps poslovni profil u novoj kartici. Uklonjen je vidljivi tekst o nepovezanom obrascu (HR/EN/DE); ponašanje slanja obrasca nije promijenjeno. Za javnu objavu treba provjeriti GDPR/privolu za automatsko učitavanje Google Mapsa.
