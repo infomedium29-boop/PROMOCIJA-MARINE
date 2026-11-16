@@ -35,3 +35,10 @@ One-time animated intro, floating header, mobile nav, language switching on all 
 The 16 image panels are from 4 AI-created illustrative montages generated for this specific demo and converted to AVIF and WebP locally. `assets/brand/logo-dark.svg` and `logo-light.svg` are concept assets.
 
 © 2026 Medium29 demo build.
+
+## Editorial refinement (2026-11-16)
+- Removed ornamental numbers, animated dot clusters, repeated brand tags and needless intro decoration. The logo reveal, floating navigation and meaningful interaction remain.
+- Rewrote customer-facing copy on **all 51 pages** to avoid referring to the construction process ("old site", "this demo", "we prepared a place" etc.) except where factual legal or illustrative-photo disclosure is needed.
+- Updated every service-detail page with more relevant, practical context and three useful enquiry prompts in HR, EN and DE.
+- Simplified the photo gallery and removed the misleading generic four-photo Nautika 540F gallery.
+- IMPORTANT: Original image assets are still **AI-generated illustrative imagery** from the initial prototype. They are not actual client references. Accurate replacement with real, approved company photographs is necessary before live publication.

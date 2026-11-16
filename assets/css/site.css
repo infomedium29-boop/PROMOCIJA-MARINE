@@ -139,3 +139,33 @@
   .hero>.container:not(.hero-bottom),.hero>.hero-bottom.container{width:calc(100% - 40px)}
   .hero>.hero-bottom.container{bottom:29px}
 }
+
+/* Medium29 editorial refinement · non-decorative visual language */
+.eyebrow::before,.eyebrow.light::before{display:none!important}
+.eyebrow{letter-spacing:.10em;font-size:.72rem;gap:0;margin-bottom:20px;font-weight:650}
+.service-card .index,.tiny-dots,.visual-mark,.scroll-cue,.intro-line,.intro-caption{display:none!important}
+.service-card-content{padding-top:28px}
+.service-card .card-arrow{letter-spacing:.015em;text-transform:none;font-size:.83rem}
+.service-steps .step{padding-top:25px}
+.service-steps .step .num{display:none}
+.service-steps .step h3{margin-top:0}
+.section-head h2,.feature-copy h2,.statement-copy h2{text-wrap:balance}
+.focus-gallery.single-photo{display:block;max-height:540px;overflow:hidden}
+.focus-gallery.single-photo .photo{width:100%;min-height:380px;height:min(48vw,540px)}
+.focus-gallery.single-photo .photo img{height:100%;width:100%;object-fit:cover;object-position:center 58%}
+.gallery-grid .gallery-tile::after{display:none}
+.gallery-grid .gallery-tile{background:var(--navy)}
+.intro-inner{max-width:min(520px,80vw)}
+.intro-brand{animation-duration:1.45s}
+@media(max-width:767px){.focus-gallery.single-photo .photo{height:310px;min-height:0}.eyebrow{margin-bottom:17px}.service-card-content{padding-top:19px}}
+
+/* Narrow viewport layout resilience */
+.feature,.two-col,.statement-grid,.service-grid{min-width:0}
+.feature>*,.two-col>*,.statement-grid>*,.feature-visual{min-width:0;max-width:100%}
+@media(max-width:767px){
+ .feature{grid-template-columns:minmax(0,1fr)!important}
+ .feature-visual{width:100%;min-width:0;max-width:100%}
+ .hero-bottom{display:none}
+}
+/* German compound nouns must wrap cleanly on narrow screens. */
+html[lang="de"] h1,html[lang="de"] h2,html[lang="de"] h3{overflow-wrap:anywhere;hyphens:auto}
