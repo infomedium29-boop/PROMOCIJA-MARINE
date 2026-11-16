@@ -221,3 +221,22 @@ html[lang="de"] h1,html[lang="de"] h2,html[lang="de"] h3{overflow-wrap:anywhere;
 .location-map-cta{white-space:nowrap;margin-left:15px;padding-left:19px;border-left:1px solid #dce5e8;color:#126b80;font-size:.79rem;font-weight:700}
 @media(max-width:630px){.location-map{height:355px;border-radius:6px}.location-map-info{left:12px;right:12px;bottom:12px;max-width:calc(100% - 24px);width:calc(100% - 24px);padding:12px;gap:9px}.location-pin-icon{width:32px;height:32px}.location-map-details strong{font-size:.85rem}.location-map-details span{font-size:.69rem}.location-map-cta{margin-left:auto;padding-left:10px;font-size:.69rem;white-space:normal;max-width:100px;text-align:right}}
 @media(max-width:360px){.location-map-info{flex-wrap:wrap}.location-map-details{flex:1}.location-map-cta{max-width:unset;margin:0 0 0 41px;border-left:0;padding-left:0;text-align:left}}
+
+/* Intro logo: center the visible SVG artwork, not the oversized source viewBox. */
+.intro-inner{
+  position:relative;
+  width:100%;
+  max-width:none;
+  padding-inline:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.intro-brand{
+  display:block;
+  flex:none;
+  width:min(350px,70vw);
+  max-width:100%;
+  height:auto;
+  margin:0 auto;
+}
